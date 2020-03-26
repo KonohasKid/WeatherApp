@@ -79,9 +79,9 @@ return `${day} ${date} ${month} ${year}`
               </div>
               <br/>
               <div className="rowww">
-                <div className=" minimum text-center">PRESSURE <br/>{Math.round(weather.main.pressure)}</div>
-                <div className=" maximum text-center">WIND <br/> {Math.round(weather.wind.speed)} m/s</div>
-                <div className=" maximum text-center">HUMIDITY <br/> {Math.round(weather.main.humidity)}%</div>
+                <div className=" mum text-center">PRESSURE <br/>{Math.round(weather.main.pressure)}</div>
+                <div className=" mum text-center">WIND <br/> {Math.round(weather.wind.speed)} m/s</div>
+                <div className=" mum text-center">HUMIDITY <br/> {Math.round(weather.main.humidity)}%</div>
 
 
               </div>

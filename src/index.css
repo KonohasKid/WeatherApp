@@ -24,6 +24,14 @@ body{
  
   border-radius: 15px;
 }
+.mum{
+  color: white;
+  font-size:15px;
+  font-weight: bolder;
+  background-color: rgba(196, 196, 196, 0.568);
+ 
+  border-radius: 15px;
+}
 .rowww{
   display: grid;
   grid-template-columns: auto auto auto;
