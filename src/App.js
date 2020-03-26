@@ -62,7 +62,7 @@ return `${day} ${date} ${month} ${year}`
   <div className="location text-center">{weather.name}, {weather.sys.country}</div>
   <div className="date text-center"> {currentDate(new Date())}</div>
           </div>
-          <div className="col-sm-4 text-center"></div>
+  <div className="col-sm-4 text-center"></div>
           </div>
           <br/>
           <div className="row">
@@ -72,8 +72,26 @@ return `${day} ${date} ${month} ${year}`
                 {Math.round(weather.main.temp)}°c
               </div>
               <br/>
+              <div className="roww">
+                <div className=" minimum text-center">MIN <br/>{Math.round(weather.main.temp_min)}</div>
+                <div className=" maximum text-center">MAX <br/> {Math.round(weather.main.temp_max)}</div>
+
+              </div>
+              <br/>
+              <div className="rowww">
+                <div className=" minimum text-center">PRESSURE <br/>{Math.round(weather.main.pressure)}</div>
+                <div className=" maximum text-center">WIND <br/> {Math.round(weather.wind.speed)} m/s</div>
+                <div className=" maximum text-center">HUMIDITY <br/> {Math.round(weather.main.humidity)}%</div>
+
+
+              </div>
+              <br/>
               <div className="weather">
-                {weather.weather[0].main}
+              <img src={"http://openweathermap.org/img/wn/" + weather.weather[0].icon +'.png'}  alt="icon"/><br/>
+                {weather.weather[0].main}<br/>
+
+                {weather.weather[0].description}
+
               </div>
             </div>
           
