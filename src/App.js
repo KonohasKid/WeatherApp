@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 const api = {
   key: "66d3f5f60bc745bf0db900685fca77fe",
   base: "https://api.openweathermap.org/data/2.5/"
@@ -32,9 +34,8 @@ let year = d.getFullYear();
 return `${day} ${date} ${month} ${year}`
 }
 
-
   return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'App suphot' : 'App') : 'App spring' }
+    <div className={((typeof weather.main != "undefined") ? ((weather.main.temp > 25) ? 'App suphot' : 'App') : 'App spring')}
     >
       <main>
         <div className="container-fluid">
@@ -67,21 +68,21 @@ return `${day} ${date} ${month} ${year}`
           <br/>
           <div className="row">
           <div className="col-sm-4 text-center"></div>
-            <div className="col-sm-4 weather-box text-center">
-              <div className="temp">
+            <div className="col-sm-4 weather-box text-center" >
+              <div className="temp" style={{boxShadow:'0px 3px 0px rgba(0, 0, 0, 0.63)'}}>
                 {Math.round(weather.main.temp)}°c
               </div>
               <br/>
               <div className="roww">
-                <div className=" minimum text-center">MIN <br/>{Math.round(weather.main.temp_min)}</div>
-                <div className=" maximum text-center">MAX <br/> {Math.round(weather.main.temp_max)}</div>
+                <div className=" minimum text-center" style={{boxShadow:'0px 3px 0px rgba(0, 0, 0, 0.63)'}}>MIN <br/>{Math.round(weather.main.temp_min)}</div>
+                <div className=" maximum text-center" style={{boxShadow:'0px 3px 0px rgba(0, 0, 0, 0.63)'}}>MAX <br/> {Math.round(weather.main.temp_max)}</div>
 
               </div>
               <br/>
               <div className="rowww">
-                <div className=" mum text-center">PRESSURE <br/>{Math.round(weather.main.pressure)}</div>
-                <div className=" mum text-center">WIND <br/> {Math.round(weather.wind.speed)} m/s</div>
-                <div className=" mum text-center">HUMIDITY <br/> {Math.round(weather.main.humidity)}%</div>
+                <div className=" mum text-center" style={{boxShadow:'0px 3px 0px rgba(0, 0, 0, 0.63)'}}>PRESSURE <br/>{Math.round(weather.main.pressure)}</div>
+                <div className=" mum text-center" style={{boxShadow:'0px 3px 0px rgba(0, 0, 0, 0.63)'}}>WIND <br/> {Math.round(weather.wind.speed)} m/s</div>
+                <div className=" mum text-center" style={{boxShadow:'0px 3px 0px rgba(0, 0, 0, 0.63)'}}>HUMIDITY <br/> {Math.round(weather.main.humidity)}%</div>
 
 
               </div>
